@@ -27,7 +27,7 @@
 (defun web-request (request &key (force-binary nil))
   "Uses Drakma to make the specified http request."
   (multiple-value-bind  (body status headers)
-      (drakma:http-request (request-uri request) 
+      (drakma:http-request (uri request) 
 			   :method (request-method request) 
 			   :content-type nil
 			   :additional-headers (plist-alist (headers request))
