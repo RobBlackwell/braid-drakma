@@ -37,6 +37,7 @@
 			   :key (drakma-key request)
 			   :certificate-password (drakma-certificate-password request)
 				 :force-binary (drakma-force-binary request))
-    (braid:make-response :status status :headers headers :body body)))
+    (braid:make-response :status status :headers (alexandria:alist-plist headers) :body body)))
 
 ;;; End
+
