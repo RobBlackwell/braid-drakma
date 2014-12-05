@@ -26,7 +26,6 @@
 
 (defun web-request (request)
   "Uses Drakma to make the specified http request."
-	(setf request (braid:ensure-request request))
   (multiple-value-bind  (body status headers)
       (drakma:http-request (uri request) 
 			   :method (request-method request) 
