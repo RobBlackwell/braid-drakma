@@ -7,9 +7,10 @@ the Drakma HTTP client.
 See [braid](https://github.com/RobBlackwell/braid).
 
 
+	> (ql:quickload :braid)
 	> (ql:quickload :braid-drakma) 
 	...
-	> (braid-drakma:web-request (braid:make-request :uri "http://www.google.co.uk"))
+	> (braid-drakma:http-request (braid:make-http-request :uri "http://www.google.co.uk"))
 	...
 
 THIS IS EXPERIMENTAL CODE THAT IS SUBJECT TO CHANGE. I welcome

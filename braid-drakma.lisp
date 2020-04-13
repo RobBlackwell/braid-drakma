@@ -2,7 +2,7 @@
 
 (in-package #:braid-drakma)
 
-(defun web-request (http-request &key (drakma-key nil) (drakma-certificate nil) (drakma-certificate-password nil)(drakma-force-binary nil))
+(defun http-request (http-request &key (drakma-key nil) (drakma-certificate nil) (drakma-certificate-password nil)(drakma-force-binary nil))
   "Uses Drakma to make the specified http request."
   (multiple-value-bind  (body status headers)
       (drakma:http-request (braid:http-request-uri http-request) 
